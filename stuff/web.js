@@ -10,28 +10,28 @@ $(selector).on('click', function(){
 //jquery of direct index load for home page 
 $(document).ready(function(){
     $('#home').click(function(){
-    $("#demo").load("home.html #home");
+    $("#demo").load("home.ejs #home");
     });
 });
 
 //jquery load for about us page 
 $(document).ready(function(){
     $('#about').click(function(){
-        $("#demo").load("aboutus.html #para");
+        $("#demo").load("aboutus.ejs #para");
     });
 });
 
 //jquery load for career page
 $(document).ready(function(){
     $('#career').click(function(){
-        $("#demo").load("career.html");
+        $("#demo").load("career.ejs");
     });
 });
 
 //jquery load for contact page
 $(document).ready(function(){
     $('#contact').click(function(){
-        $("#demo").load("contact.html #data");
+        $("#demo").load("contact.ejs #data");
     });
 });
 
