@@ -9,7 +9,7 @@ app.use('/scripts', express.static('scripts'));
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 app.get('/', function(req,res){
-    res.render('index');
+    res.render('home');
 });
 
 app.get('/career', function(req,res){

@@ -5,33 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="/assets/style.css" type="text/css">
+
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <body >
         <% include partials/nav.ejs %>
-        
-    <!-- Navigation Bar -->
-
-    <!-- <div style="margin-top:10px;"></div>
-        <nav id="nav" class="navbar navbar-inverse">
-            <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                 <li><a href="index.html">Home</a></li>
-                 <li><a href="career.html">Career</a></li>
-                 <li><a id="aboutus.html">About Us</a></li>
-                 <li><a id="contact">Contact Us</a></li>
-           </ul>
-           </div>
-        </nav>  -->
 
     <!--id for sharing files through ajax -->
     <div class="page">
@@ -42,10 +29,12 @@
     <br/><br/><br/><br/><br/>
     <h2 style="margin-top:40px;"> <center> Thanks for getting in Touch </center> </h2>
     <br/>
+
     <p>Your contacted Name: <%= data.fname +" "+ data.lname %> <br/>
        Designation: <%= data.designation %> <br/>
        We will reply to you at <%=  data.email %>
     </p>
+
     <br/><br/><br/>
     <!--incons link div  -->
     <div style="margin-left:450px;">

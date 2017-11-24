@@ -9,6 +9,11 @@ $(selector).on('click', function(){
 
 //jquery of direct index load for home page 
 $(document).ready(function(){
+    $("#demo").load("home.ejs #home");
+});
+
+//jquery of direct index load for home page 
+$(document).ready(function(){
     $('#home').click(function(){
     $("#demo").load("home.ejs #home");
     });
@@ -38,7 +43,7 @@ $(document).ready(function(){
 // Contact form validation scripts Starts here
 //On Blur function for fname validation
 function myfunction(){
-        var fname = document.getElementById("fname").value;
+       var fname = document.getElementById("fname").value;
        var message = "* Text must be filled in";
        var data = /^\s*$/;
       if(data.test(fname)) {
