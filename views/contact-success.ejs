@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/assets/style.css" type="text/css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body >
+        <% include partials/nav.ejs %>
+
+    <!--id for sharing files through ajax -->
+    <div class="page">
+
+    <img src="/assets/images/career3.jpg" class="data" />
+
+    <!--content para -->
+    <br/><br/><br/><br/><br/>
+    <h2 style="margin-top:40px;"> <center> Thanks for getting in Touch </center> </h2>
+    <br/>
+
+    <p>Your contacted Name: <%= data.fname +" "+ data.lname %> <br/>
+       Designation: <%= data.designation %> <br/>
+       We will reply to you at <%=  data.email %>
+    </p>
+
+    <br/><br/><br/>
+    <!--incons link div  -->
+    <div style="margin-left:450px;">
+        <a href="https://www.facebook.com/"> <i style="float:left; padding-left:10px;" class="fa fa-facebook-official fa-5x" aria-hidden="true"> </i> </a>
+        <a href="https://www.twitter.com/"> <i style="float:left; padding-left:10px;" class="fa fa-twitter-square fa-5x" aria-hidden="true"> </i> </a>
+        <a href="https://www.gmail.com/"> <i style="float:left; padding-left:10px;" class="fa fa-envelope fa-5x" aria-hidden="true"> </i> </a>
+        <a href="https://www.linkedin.com/"> <i style="float:left; padding-left:10px;" class="fa fa-linkedin-square fa-5x" aria-hidden="true"> </i> </a>
+    </div>
+
+
+    </div>
+
+</body>
+</html>

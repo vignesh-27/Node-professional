@@ -2,29 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
-var object = [
-    {
-    "application": "Google Chrome",
-    "keycount": "39",
-    "timespent": "177"
-    },
-    {
-    "application": "Skype",
-    "keycount": "1",
-    "timespent": "0"
-    },
-    {
-    "application": "Google Chrome",
-    "keycount": "2",
-    "timespent": "1"
-    },
-    {
-    "application": "Code",
-    "keycount": "1",
-    "timespent": "188"
-    }
-    ];
-
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('stuff'));
 app.use('/scripts', express.static('scripts'));
@@ -32,24 +9,33 @@ app.use('/scripts', express.static('scripts'));
 var urlencodedParser = bodyParser.urlencoded({extended:false});
 
 app.get('/', function(req,res){
-    
-    var person = {};
-
-    for(var i=0; i<object.length; i++){
-
-        var temp = object[i].application;
-        
-        if(person.hasOwnProperty(temp)) {
-            person[temp].keycount = parseInt(person[temp].keycount) + parseInt(object[i].keycount);
-            person[temp].timespent = parseInt(person[temp].timespent) + parseInt(object[i].timespent);
-        }else{
-        person[temp] = object[i];
-        delete person[temp].application;
-        }
-    }
-    res.json(person);
+    res.render('home');
 });
 
+app.get('/career', function(req,res){
+    res.render('career');
+});
+
+app.get('/home', function(req,res){
+   res.render('home', {qs:req.query});
+});
+
+app.get('/contact', function(req,res){
+    res.render('contact');
+});
+
+app.post('/contact', urlencodedParser, function(req,res){
+    console.log(req.body);
+    res.render('contact-success', {data:req.body});
+});
+
+
+app.get('/profile/:name', function(req,res){
+    console.log(req.params.name);
+    var data = {name: 'vicky', age: 29, designation: 'developer', hobbies:['Eating', 'Playing', 'Reading']};
+    
+    res.render('profile', {person: req.params.name, data: data});
+});
 
 app.listen(4000);
 console.log('your app running a port 4000');

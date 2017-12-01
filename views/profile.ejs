@@ -1,0 +1,16 @@
+<html>
+    <head></head>
+    <body>
+        <% include partials/nav.ejs %>
+
+        <h1>The Requested Person Name is :<%= person %></h1>
+        <h2>Name: <%= data.name %> <br/> Age: <%= data.age %> <br/> Designation: <%= data.designation %></h2><br/>
+        <h3>Hobbies</h3>
+        <ul>
+            <% data.hobbies.forEach(function(item){ %>
+            <li> <%= item %> </liu>
+            <%  }) %>
+        </ul>
+        
+    </body>
+</html>
